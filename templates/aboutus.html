@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/design.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        #font1 {
+            position: absolute;
+            width: 50vw;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #font1 img {
+            height: 180px;
+            margin-left: -560px;
+            margin-top: -140px;
+            position: relative;
+        }
+
+        #font img:hover {
+            scale: 1.1;
+            transition: ease-in-out 0.2s;
+        }
+
+        .heading {
+            color: rgb(191, 19, 234);
+            font-weight: bold;
+            font-size: 49px;
+            margin-left: -200px;
+            margin-top: -30px;
+            position: relative;
+        }
+
+        #home-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #home-button:hover {
+            color: white;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+
+        #name {
+            top: 23px;
+            position: absolute;
+            left: 150px;
+            font-size: 34px;
+        }
+
+        #name:hover {
+            cursor: pointer;
+        }
+
+        .button {
+            height: inherit;
+            margin-top: 0;
+            padding: px;
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+
+        }
+
+        .button:hover {
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        hr {
+            width: 70vw;
+            border: 1px solid grey;
+
+        }
+
+        .content {
+            left: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 37PX;
+        }
+
+        #reshover {
+            color: grey;
+        }
+
+        #reshover:hover {
+            color: black;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #name:hover {
+
+            scale: 1.1;
+            transition: ease-in-out 0.2s;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .heading:hover {
+            /* text-decoration: underline; */
+            opacity: 0.8;
+            transition: ease-in-out 0.2s;
+        }
+
+        .data {
+            display: flex;
+            margin-top: 170px;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+
+        }
+
+        .indata {
+            display: flex;
+            width: 80vw;
+            border: 1px solid black;
+            height: 35vh;
+            border-radius: 30px;
+            padding: 40px;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(193, 102, 230);
+
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            font-size: 18px;
+            gap: 5px;
+        }
+
+        .details p {
+            margin: 0;
+        }
+
+        #name1{
+            font-weight: bold;
+            font-size: 22px;
+
+        }
+
+
+        .indata:hover {
+            scale: 1.02;
+            transition: ease all 0.5s;
+            box-shadow: 10px 10px 2px black;
+        }
+
+        .selimg {
+            border: 1px solid black;
+            width: 15vw;
+            border-radius: 50%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 100px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .selimg2 {
+            border: 1px solid black;
+            width: 15vw;
+            border-radius: 50%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 100px;
+             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .selimg3 {
+            border: 1px solid black;
+            width: 15vw;
+            border-radius: 50%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 100px;
+             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .selimg4 {
+            border: 1px solid black;
+            width: 15vw;
+            border-radius: 50%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 100px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .inimg {
+            border: 1px solid black;
+            width: 14vw;
+            height: 28.5vh;
+            border-radius: 50%;
+
+        }
+
+        .details {
+            text-align: center;
+        }
+
+        .abt {
+            text-align: center;
+            max-width: 500px;
+            font-size: 20px;
+        }
+
+        #contri {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-content: space-evenly;
+            background-color: grey;
+            height: 40vh;
+            border-radius: 40px;
+            align-items: center;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .incontri {
+            border: 1px solid white;
+            width: 300px;
+            height: 250px;
+            border-radius: 40px;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 10px 10px 10px black;
+            font-size: 22px;
+        }
+
+        #findus {
+            height: 140px;
+            width: 100%;
+            background-color: black;
+            width: 60vw;
+            margin-left: 20%;
+            border-radius: 40px;
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* font-family: font2; */
+            font-size: 25px;
+        }
+
+        .anton-regular {
+            font-family: "Anton", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline ">
+            <div class="container-fluid">
+                <img src="../static/img/image.png" class="logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything"
+                        aria-label="Search">
+                    <button class="btn submit" type="submit">Search</button>
+                </form>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" aria-current="page" href="{{url_for('index')}}"style="color: rgb(138, 67, 213);">Home</a>
+
+                        <div class="dropdown explore">
+                            <button class="dropdown-toggle explore nav-link" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Data Science</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Python</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Excel</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Java</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">C++</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">C</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Web Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Game Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">AI Engineering</a></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="{{url_for('contact')}}" class="nav-link">Contact Us</a>
+                        <a href="{{url_for('about')}}" class="nav-link active">About Us</a>
+                        <a class="nav-link" href="{{url_for('pricing')}}">Plans And Pricing</a>
+                        <a class="nav-link" href="{{url_for('teach')}}">Teach on Agaahi</a>
+                    </div>
+                    <form action="{{ url_for('login') }}" method="get">
+                        <button class="btn login">Log In</button>
+                    </form>
+                    <form action="{{ url_for('register') }}" method="get">
+                        <button class="btn submit">Sign Up</button>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="data">
+        <p class="heading">ABOUT US</p>
+        <div class="indata">
+            <div class="details">
+                <p id="name1"><b>Priyanshi</b></p>
+                <p>Course - BE-AI</p>
+                <p>Batch - G33</p>
+                <p>Roll No. - 2410993309</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/priyanshi-a67870324/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon" style="width: 20px; height: 20px;"></a></p>
+            </div>
+            <div class="selimg">
+                <div class="inimg" style="
+              background-image: url(https://img.freepik.com/premium-photo/young-smiling-woman-ann-avatar-3d-vector-people-character-illustration-cartoon-minimal-style_1240525-13045.jpg);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "></div>
+            </div>
+            <div class="abt">
+                Hello! I'm Priyanshi, a passionate designer and web developer
+                with a keen eye for detail and a love for creating intuitive digital
+                experiences. My expertise lies in blending creativity with
+                functionality, ensuring that every project I work on is not only
+                visually appealing but also user-friendly and efficient. From crafting
+                sleek interfaces to coding dynamic websites, I thrive on solving
+                problems and bringing ideas to life in the digital space.
+            </div>
+        </div>
+        <div class="indata">
+            <div class="details">
+                <p id="name1"><b>Harshita</b></p>
+                <p>Course - BE-AI</p>
+                <p>Batch - G33</p>
+                <p>Roll No. - 2410993283</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/harshita-247385324/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon" style="width: 20px; height: 20px;"></a></p>
+            </div>
+            <div class="selimg2">
+                <div class="inimg" style="
+              background-image: url(https://img.freepik.com/premium-vector/girl-s-face-with-beautiful-smile-female-avatar-website-social-network_499739-527.jpg?w=2000);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "></div>
+            </div>
+            <div class="abt">
+                Hello! I’m Harshita , a passionate web developer with a keen interest in
+                technology I thrive on creativity and enjoy transforming ideas into
+                engaging experiences. In my spare time, I love listening songs which
+                allow me to relax and discover fresh perspectives. I’m always eager to
+                learn and collaborate .
+            </div>
+        </div>
+        <div class="indata">
+            <div class="details">
+                <p id="name1"><b>Disha</b></p>
+                <p>Course - BE-AI</p>
+                <p>Batch - G33</p>
+                <p>Roll No. - 2410993267</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/disha-818696343/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon" style="width: 20px; height: 20px;"></a></p>
+            </div>
+            <div class="selimg3">
+                <div class="inimg" style="
+              background-image: url(https://img.freepik.com/premium-vector/portrait-cute-smiling-girl_362838-91.jpg?w=740);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "></div>
+            </div>
+            <div class="abt">
+                I’m Disha, a dedicated web developer with a strong focus on building
+                responsive and efficient websites. I specialize in creating seamless
+                user experiences by combining clean code with modern web technologies.
+                Whether it's developing from scratch or optimizing existing projects,
+                I’m always striving to deliver high-performance, scalable solutions
+                that meet clients' needs.
+            </div>
+        </div>
+        <div class="indata">
+            <div class="details">
+                <p id="name1"><b>Aditi</b></p>
+                <p>Course - BE-AI</p>
+                <p>Batch - G33</p>
+                <p>Roll No. - 2410993250</p>
+                <p>LinkedIn: <a href="https://in.linkedin.com"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon" style="width: 20px; height: 20px;"></a></p>
+            </div>
+            <div class="selimg4">
+                <div class="inimg" style="
+              background-image: url(https://img.freepik.com/premium-vector/woman-character-with-dark-hair_647688-66.jpg?w=740);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "></div>
+            </div>
+            <div class="abt">
+                I’m Aditi, a dedicated web developer with a strong focus on building
+                responsive and efficient websites. I specialize in creating seamless
+                user experiences by combining clean code with modern web technologies.
+                Whether it's developing from scratch or optimizing existing projects,
+                I’m always striving to deliver high-performance, scalable solutions
+                that meet clients' needs. 
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
+
+  <footer class="bg-dark footer mt-5">
+        <div class="empty">
+            <h3 class="text-center">Explore the world of learning with us</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="{{url_for('development')}}">Web development</a>
+                    <br>
+                    <a href="{{url_for('python_courses')}}">Python</a>
+                    <br>
+                    <a href="{{url_for('IT_Software')}}">ChatGPT</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('datasciencecourses')}}">Data Science</a>
+                    <br>
+                    <a href="{{url_for('othersoftware')}}">Excel</a>
+                    <br>
+                    <a href="{{url_for('programming_languages')}}">C/C++</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('about')}}">About Us</a>
+                    <br>
+                    <a href="{{url_for('contact')}}">Contact Us</a>
+                    <br>
+                    <a href="#">Privacy Policy</a>
+                    <br>
+                    <a href="#">Terms of Service</a>
+                    <br>
+
+                </div>
+                <div class="social-media">
+                    <a href="www.facebook.com" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com" class="social">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com" class="social">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="contact-info row">
+                    <p style="color: white;">Phone: 123-456-7890</p>
+                    <p style="color: white;">Email: support@example.com</p>
+                </div>
+            </div>
+            <p class="text-center" style="background-color: black; color: white">
+                &copy;Agaahi
+            </p>
+    </footer>
+
+
+    
+    <script src="https://kit.fontawesome.com/9a037b9bfa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

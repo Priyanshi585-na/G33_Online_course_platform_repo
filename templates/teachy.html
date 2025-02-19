@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/design.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        .dashboard-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s ease-in-out;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: rgb(138, 67, 213);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
+            <div class="container-fluid">
+                <img src="../static/img/image.png" class="logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything"
+                        aria-label="Search">
+                    <button class="btn submit" type="submit">Search</button>
+                </form>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+                        <div class="dropdown explore">
+                            <button class="dropdown-toggle explore nav-link" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{url_for('datasciencecourses')}}">Data Science</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('python_courses')}}">Python</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('othersoftware')}}">Excel</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('javacourses')}}">Java</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('programming_languages')}}">C++</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('programming_languages')}}">C</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('development')}}">Web Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('development')}}">Game Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('IT_Software')}}">AI Engineering</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-link active" href="{{url_for('teachy')}}">Teach on Agaahi</a>
+                    </div>
+                    <button class="btn login">Log Out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container dashboard-section">
+        <h1 class="text-center">Instructor Dashboard</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Create Courses</h2>
+                    <p>Design and publish your own courses with videos, quizzes, assignments, and more.</p>
+                    <button class="btn login">Start Creating</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Create Practice Tests</h2>
+                    <p>Develop practice tests to help students assess their knowledge and prepare for exams.</p>
+                    <button class="btn login">Create Tests</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Manage Courses</h2>
+                    <p>Edit and update your existing courses to keep the content fresh and engaging.</p>
+                    <button class="btn login">Manage Courses</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Live Sessions</h2>
+                    <p>Schedule and conduct live sessions with your students to provide real-time guidance and support.
+                    </p>
+                    <button class="btn login">Manage Sessions</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Messages</h2>
+                    <p>Communicate with your students through direct messages to provide personalized support.</p>
+                    <button class="btn login">View Messages</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <h2>Analytics</h2>
+                    <p>Track the performance of your courses and student progress with detailed analytics.</p>
+                    <button class="btn login">View Analytics</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark footer mt-5">
+        <div class="empty">
+            <h3 class="text-center">Explore the world of learning with us</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="{{url_for('development')}}">Web development</a>
+                    <br>
+                    <a href="{{url_for('python_courses')}}">Python</a>
+                    <br>
+                    <a href="{{url_for('IT_Software')}}">ChatGPT</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('datasciencecourses')}}">Data Science</a>
+                    <br>
+                    <a href="{{url_for('othersoftware')}}">Excel</a>
+                    <br>
+                    <a href="{{url_for('programming_languages')}}">C/C++</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('about')}}">About Us</a>
+                    <br>
+                    <a href="{{url_for('contact')}}">Contact Us</a>
+                    <br>
+                    <a href="#">Privacy Policy</a>
+                    <br>
+                    <a href="#">Terms of Service</a>
+                    <br>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com" class="social">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com" class="social">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="contact-info row">
+                    <p style="color: white;">Phone: 123-456-7890</p>
+                    <p style="color: white;">Email: support@example.com</p>
+                </div>
+            </div>
+            <p class="text-center" style="background-color: black; color: white">
+                &copy;Agaahi
+            </p>
+    </footer>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/9a037b9bfa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

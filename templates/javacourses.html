@@ -1,0 +1,257 @@
+{% extends 'base2.html' %}
+{% block title %}
+java_courses
+    
+{% endblock title %}
+
+{% block style %}
+
+<style>
+    .w1 {
+        font-weight: 600;
+    }
+
+    .star {
+        color: rgb(138, 67, 213);
+    }
+
+    .tags {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tags a {
+        background-color: rgb(229, 229, 229);
+        color: black;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    .popular{
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .box{
+        display: flex;
+        justify-content:space-between;
+    }
+</style>
+{% endblock style %}
+
+
+{% block main %}
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-4 text-center">
+        Java Courses
+    </h1>
+    <p class="text-lg mb-6">
+        Java courses cover everything from basic to advanced programming techniques, including object-oriented
+        programming and web, mobile, and enterprise application development—a must for software development and
+        engineering careers.
+    </p>
+    <div class="flex flex-wrap mb-6">
+        <div class="btn">
+            <p class="w1">
+                Number of learners
+            </p>
+            <p class="text-2xl font-semibold">
+                15,828,554
+            </p>
+        </div>
+        <div class="btn">
+            <p class="w1">
+                Number of courses
+            </p>
+            <p class="text-2xl font-semibold">
+                1,454
+            </p>
+        </div>
+        <div class="btn">
+            <p class="w1">
+                Number of hands-on practice
+            </p>
+            <p class="text-2xl font-semibold">
+                5,294
+                <i class="fas fa-info-circle text-gray-400">
+                </i>
+            </p>
+        </div>
+        <div class="btn">
+            <p class="w1">
+                Average course rating
+            </p>
+            <p class="text-2xl font-semibold">
+                4.5
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star-half-alt star"></i>
+            </p>
+        </div>
+    </div>
+    <div class="tags">
+
+        <a href="{{url_for('development')}}" class="px-4 py-2 bg-gray-200 rounded-full">Development</a>
+        <a href="{{url_for('IT_Software')}}" class="px-4 py-2 bg-gray-200 rounded-full">IT & Software</a>
+        <a href="{{url_for('programming_languages')}}" class="px-4 py-2 bg-gray-200 rounded-full">Programming
+            languages</a>
+        <a href="{{url_for('othersoftware')}}" class="px-4 py-2 bg-gray-200 rounded-full">Other IT &amp;
+            Software</a>
+    </div>
+    <h2 class="font-bold mb-4 mt-4">
+        Courses to get you started
+    </h2>
+    <p class="text-lg mb-6">
+        Explore courses from experienced, real-world experts.
+    </p>
+    <div class="flex mb-4">
+        <p class="text-center popular">
+            Most popular
+        </p>
+
+    </div>
+    <div class="box">
+        <div class="card shadow-lg" style="width:20rem">
+            <img alt="Java Masterclass 2025: 130+ Hours of Expert Lessons" class="card-img-top"
+                src="https://storage.googleapis.com/a1aa/image/P6yh70das-FUFNbqp5bVhwWQZWjuNjvP_RRoDIixHCg.jpg">
+            <h3 class="text-lg font-semibold mb-2">
+                Java Masterclass 2025: 130+ Hours of Expert Lessons
+            </h3>
+            <p class="text-gray-600 mb-2">
+                Tim Buchalka, Tim Buchalka's Learn Programming...
+            </p>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    4.6
+                </span>
+                <span class="text-gray-600 ml-2">
+                    (204,144)
+                </span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-2xl font-semibold">
+                    ₹599
+                </span>
+               <strike>
+                    ₹3,999
+               </strike>
+            </div>
+            
+        </div>
+        <div class="card shadow-lg" style="width:20rem"> 
+            <a href="https://youtu.be/UmnCZ7-9yDY?si=_qlo-pfeyCW581JZ" target="_blank">
+                <img alt="Java Programming for Complete Beginners" class="card-img-top"
+                    height="400"
+                    src="https://storage.googleapis.com/a1aa/image/fTvDYxoITMFv0o_iiZ08wslpuk5BXda8TdWEYUgcWrY.jpg"
+                    width="600" /></a>
+            <h3 class="text-lg font-semibold mb-2">
+                Java Programming for Complete Beginners
+            </h3>
+            <p class="text-gray-600 mb-2">
+                Code IT, Sunshine Coding
+            </p>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    4.3
+                </span>
+                <span class="text-gray-600 ml-2">
+                    (16,516)
+                </span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-2xl font-semibold">
+                    ₹599
+                </span>
+               <strike>
+                    ₹3,999
+                </strike>
+            </div>
+        </div>
+        <div class="card shadow-lg" style="width:20rem">
+            <a href="https://youtu.be/7pv3dSXSHIc?si=0SRheseWQtict0Hz" target="_blank">
+                <img alt="Project Development Using JAVA for Beginners - 2025" class="card-img-top"
+                    height="400"
+                    src="https://storage.googleapis.com/a1aa/image/c3QdQug-Hp6f35DPlmfUQ2P74VIiWLx4YEycB_UhtD4.jpg"
+                    width="600" /></a>
+            <h3 class="text-lg font-semibold mb-2">
+                Project Development Using JAVA for Beginners - 2025
+            </h3>
+            <p class="text-gray-600 mb-2">
+                Hemanth kumar
+            </p>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    4.5
+                </span>
+                <span class="text-gray-600 ml-2">
+                    (3,239)
+                </span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-2xl font-semibold">
+                    ₹499
+                </span>
+               <strike>
+                    ₹2,799
+                </strike>
+            </div>
+        </div>
+        <div class="card shadow-lg" style="width:20rem">
+            <a href="https://youtu.be/H2iqJaVKac8?si=h1DDRBpn7qIfUoUr" target="_blank">
+                <img alt="Selenium WebDriver with Java -Basics to Advanced+Frameworks"
+                    class="card-img-top" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/_SRojYGoR7tpH_tuJyWslZMjcuX7vRQjzvuavU-bRf0.jpg"
+                    width="600" /></a>
+            <h3 class="text-lg font-semibold mb-2">
+                Selenium WebDriver with Java -Basics to Advanced+Frameworks
+            </h3>
+            <p class="text-gray-600 mb-2">
+                Rahul Shetty
+            </p>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    4.6
+                </span>
+                <span class="text-gray-600 ml-2">
+                    (127,155)
+                </span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-2xl font-semibold">
+                    ₹599
+                </span>
+               <strike>
+                    ₹3,999
+                </strike>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock main %}

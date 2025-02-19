@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=handshake" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline ">
+            <div class="container-fluid">
+                <img src="../static/img/image.png" class="logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything"
+                        aria-label="Search">
+                    <button class="btn submit" type="submit">Search</button>
+                </form>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('index')}}"
+                            style="color: rgb(138, 67, 213);">Home</a>
+
+                        <div class="dropdown explore">
+                            <button class="dropdown-toggle explore nav-link" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Data Science</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Python</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Excel</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Java</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">C++</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">C</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Web Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">Game Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('login')}}">AI Engineering</a></li>
+                            </ul>
+                        </div>
+                        
+                    <a href="{{url_for('contact')}}" class="nav-link">Contact Us</a>
+                        <a href="{{url_for('about')}}" class="nav-link">About Us</a>
+                        <a class="nav-link" href="{{url_for('pricing')}}">Plans And Pricing</a>
+                        <a class="nav-link" href="{{url_for('teach')}}">Teach on Agaahi</a>
+                    </div>
+                    <form action="{{ url_for('login') }}" method="get">
+                        <button class="btn login">Log In</button>
+                    </form>
+                    <form action="{{ url_for('register') }}" method="get">
+                        <button class="btn submit">Sign Up</button>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <picture>
+                    <img alt="img" class="img"
+                        src="https://d2culxnxbccemt.cloudfront.net/craft/content/uploads/2023/03/31143221/01-craftsy-lifestyle-2.jpg">
+                    <div class="opacity">In-demand skills.
+                        <br> Available on demand.
+                        <br>
+                        <span class="s1">
+                            Get the top skills that others are using to advance their careers.
+                        </span>
+                        <div class="buttons">
+                            <form action="{{ url_for('login') }}" method="get">
+                                <button class="btn python">LEARN PYTHON</button>
+                            </form>
+                            <form action="{{ url_for('login') }}" method="get">
+                                <button class="btn excel">LEARN EXCEL</button>
+                            </form>
+                        </div>
+                    </div>
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <img alt="img" class="img"
+                        src="https://th.bing.com/th/id/OIP.2XqQlwTSoCW3OKuDbFE_SAHaE4?w=1212&h=800&rs=1&pid=ImgDetMain">
+                    <div class="opacity">Don't just Dream It
+                        <br>
+                        <p class="text-center">
+                            Make it
+                        </p>
+                        <span class="s1">
+                            Create custom tracks for your game from retro to RPG.
+                            <br>Compose, mix and play back music in Unity, Unreal and Godot.
+                        </span>
+                        <div class="buttons">
+                            <button class="python">EXPLORE MORE</button>
+
+                        </div>
+                    </div>
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <img alt="img" class="img"
+                        src="https://www.bgsu.edu/content/dam/BGSU/academics/computer-science/AdobeStock-294794307.jpeg">
+                    <div class="opacity">From Zero to your own
+                        <br>
+                        <p class="text-center"></p>AI model
+                        <br>
+                        <span class="s1">
+                            Master Deep Learning with no previous experience.
+                        </span>
+                        <div class="buttons">
+                            <button class="python">START NOW</button>
+
+                        </div>
+                    </div>
+                </picture>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <br><br><br>
+    <div>
+        <p
+            style="font-weight: bold;font-size:48px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left:50px;">
+            All the skills you need in one place
+        </p>
+        <p style="font-size: 20px;margin-left:50px">
+            From critical thinking to critical thinking, Agaahi supports your professional development.
+        </p>
+    </div>
+    <br><br>
+
+
+    <div class="navg">
+        <ul>
+            <li><a href="#carouselExample" class="a">Courses</a></li>
+            <li><a href="#features" class="a">Key features</a></li>
+            <li><a href="#teach" class="a">For Teachers</a></li>
+            <li><a href="#pricing" class="a">Pricing</a></li>
+            <li><a href="#accordionFlushExample" class="a">FAQs</a></li>
+        </ul>
+    </div>
+
+
+    <div id="carouselExample" class="carousel slide cards" style="color: #c6c4c4;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card1">
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP.HNEJ3gJ0Qn_sGsUfQY5eTAHaEK?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="chatgpt">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">ChatGPT Complete Guide: Learn GenAI, ChatGPT
+                                &
+                                more...
+                            </p>
+                            <p>Artificial Intelligence (AI) has brought about a significant transformation in the
+                                software industry and its technologies, revolutionizing the business landscape. Chatbots
+                                are one of the types of AI-powered platforms that mimic human-like conversation.</p>
+                            <br>
+                            <strong>4.5</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B style="margin: 15px;">
+                            Rs. 459
+                            <strike style="color: grey;"> 4,999</strike>
+                        </B>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP.Oh-Qm_3vLQWPLx2v77F9sQHaEM?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">The Data Science Course: Complete Data
+                                Science
+                                Bootcamp
+                            </p>
+                            <p>Data science is the study of data that helps us derive useful insight for business
+                                decision making. Data Science is all about using tools, techniques, and creativity to
+                                uncover insights hidden within data.Learn all about it</p>
+                            <br><br><br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 649
+                            <strike style="color: grey;">3,999</strike>
+                        </B>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://wallpapercave.com/wp/wp8661113.jpg" class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">The 100 Day of Code: Complete Python Pro
+                                Bootcamp
+                            </p>
+                            <p>
+                                Python is one of the most popular programming languages today, known for its simplicity,
+                                extensive features and library support. Its clean and straightforward syntax makes it
+                                beginner-friendly, while its powerful libraries and frameworks makes it perfect for
+                                developers.
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 549
+                            <strike style="color: grey;">3,299</strike>
+                        </B>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP._K67pSLoipk5QfdEhBzLdAHaE7?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Machine Learning A-Z: AI, python & R [2025]
+                            </p>
+                            <p>
+                                Machine learning is a branch of artificial intelligence that enables algorithms to
+                                uncover hidden patterns within datasets. It allows them to predict new, similar data
+                                without explicit programming for each task.
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 649
+                            <strike style="color: grey;">3,999</strike>
+                        </B>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card1">
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230703144619/CPP-Language.png"
+                            class="card-img-top" alt="chatgpt">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Beginning C++ Programming - From Beginner to
+                                Beyond
+                            </p>
+                            <p>
+                                C++ has object-oriented, generic, and functional features, in addition to facilities for
+                                low-level memory manipulation for systems like microcomputers or to make operating
+                                systems like Linux or Windows.
+                            </p>
+                            <br>
+                            <strong>4.5</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <b>
+                            Rs. 850
+                            <strike style="color: grey;">3,499</strike>
+                        </b>
+
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://cdn.eduonix.com/assets/images/header_img/2019022215330111057.jpg"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Microsoft Excel - Excel from Beginner to
+                                Advanced
+                            </p>
+                            <p>
+                                We have created active learning activities, so you can test and build your knowledge.
+                                Making the learning experience more fun and engaging.
+                                Track your progress with Agaahi.
+
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 649
+                            <strike style="color: grey;">3,999</strike>
+                        </B>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://wallpaperaccess.com/full/314785.jpg" class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">C Programming for beginners - Master C
+                                language
+                            </p>
+                            <p>
+                                C is a general-purpose, procedural, and middle-level programming language used for
+                                developing computer software, system programming, applications, games, and more.
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 349
+                            <strike style="color: grey;">2,299</strike>
+                        </B>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP.8HrxQtTSz0iu6XUdvVcwVwHaEo?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">The Ultimate guide of Game Development with
+                                Unity
+                            </p>
+                            <p>
+                                Unity is one of the most popular game engines for both 2D and 3D games. You don’t need
+                                to have a strong understanding of physics or mathematics to develop games. The game
+                                engine takes care of most of that stuff.
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 649
+                            <strike style="color: grey;">3,999</strike>
+                        </B>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <div class="card1">
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://wallpapers.com/images/hd/ai-pictures-1920-x-1080-11b9nhedsdea7awz.jpg"
+                            class="card-img-top" alt="chatgpt">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">The AI Engineer Course[2025] - Complete AI
+                                Engineer Bootcamp
+                            </p>
+                            <p>
+                                Artificial intelligence (AI) is reshaping industries across the spectrum. AI automates
+                                methods, optimizes operations, and permits leap-forward innovations from healthcare to
+                                finance, retail, manufacturing, and more
+                            </p>
+                            <br>
+                            <strong>4.5</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+
+                        Rs. 459
+                        <strike style="color: grey;">4,999</strike>
+
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://www.navkartechnosoft.com/assets/img/fullstack_development/full_stack_development_banner.png"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Full Stack Web Development Course
+                            </p>
+                            <p>
+                                Full Stack Development refers to the development of both front end (client side) and
+                                back end (server side) portions of web applications
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 789
+                        </B>
+                        <strike style="color: grey;">8,999</strike>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP.bkY5rGU2waE_g-yPEOacYQHaEo?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Java Masterclass 2025 : 130+ hours of Expert
+                                Lessons
+                            </p>
+                            <p>
+                                Java is one of the most popular and widely used programming languages. Used to develop
+                                mobile apps, desktop apps, web apps, web servers, games, and
+                                enterprise-level systems.
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 549
+                        </B>
+                        <strike style="color: grey;">3,299</strike>
+                    </div>
+
+                    <div class="card zoom-container" style="width: 22rem;">
+                        <img src="https://th.bing.com/th/id/OIP.vDwTPpJS8_BMegMoA9LVwAHaFd?rs=1&pid=ImgDetMain"
+                            class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;">Complete Data Science, Machine Learning,
+                                NLP, DL Bootcamp
+                            </p>
+                            <p>
+                                The meaning of NLP is Natural Language Processing (NLP) which is a fascinating and
+                                rapidly evolving field that intersects computer science, artificial intelligence, and
+                                linguistics
+                            </p>
+                            <br>
+                            <strong>4.6</strong>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star" style="color: #fd8b3f;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #fd8b3f;"></i>
+                        </div>
+                        <B>
+                            Rs. 649
+                        </B>
+                        <strike style="color: grey;">3,999</strike>
+                    </div>
+                </div>
+                =
+            </div>
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon prevbtn" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon prevbtn" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <br><br>
+
+    <section class="features py-5 bg-light" id="features">
+        <h1 class="animate__animated animate__fadeInDown text-center"
+            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Learning focused on your
+            goals</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature animate__animated animate__zoomIn">
+                        <i class="fas fa-book"></i>
+                        <h3>Quality Content</h3>
+                        <p>Access high-quality, well-structured course materials that simplify learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature  animate__animated animate__zoomIn">
+                        <i class="fas fa-users"></i>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry experts with years of experience and proven track records.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature animate__animated animate__zoomIn">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Certification</h3>
+                        <p>Receive recognized certificates to boost your professional credentials.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature animate__animated animate__zoomIn">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Interactive Learning</h3>
+                        <p>Engage with interactive quizzes and practical assignments to reinforce learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="feature animate__animated animate__zoomIn">
+                        <i class="fas fa-clock"></i>
+                        <h3>Flexible Schedule</h3>
+                        <p>Learn at your own pace with flexible schedules and on-demand access to course materials.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature animate__animated animate__zoomIn">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Community</h3>
+                        <p>Connect and collaborate with a global community of learners and professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="container teach-section" id="teach" style="background-color: #fff !important;">
+        <h1 class="text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Join
+            Our Teaching Community</h1>
+        <p class="text-center">Share your knowledge and inspire learners worldwide.</p>
+
+        <div class="row mt-4" style="background-color: #fff !important;">
+            <div class="col-md-4 tcard">
+                <div class="teach-item text-center">
+                    <img src="https://i0.wp.com/cosmictouchblog.com/wp-content/uploads/2022/05/create-own-course-online-3.png?w=500&ssl=1"
+                        alt="Create Your Course">
+                    <h5>Create Your Course</h5>
+                    <p>Use our intuitive platform to create engaging courses.</p>
+                </div>
+            </div>
+            <div class="col-md-4 tcard">
+                <div class="teach-item text-center">
+                    <img src="https://th.bing.com/th/id/OIP.envqHeOcJC-vLMA05RfgLQHaEJ?rs=1&pid=ImgDetMain"
+                        alt="Reach Students">
+                    <h5>Reach Students</h5>
+                    <p>Connect with students from around the globe.</p>
+                </div>
+            </div>
+            <div class="col-md-4 tcard">
+                <div class="teach-item text-center">
+                    <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/how-to-make-money-online.jpg"
+                        alt="Earn Income">
+                    <h5>Earn Income</h5>
+                    <p>Monetize your knowledge and earn income.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="pricing" class="py-5 pricings">
+        <p
+            style="font-weight: bold;font-size:48px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left:50px;">
+            Accelerate growth — for you or your organization
+
+        </p>
+        <p style="font-size: 20px;margin-left:50px">
+            Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more.
+        </p>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <div class="pricing-card">
+                        <h2>Basic Access</h2>
+                        <p class="price">₹499/month</p>
+                        <ul>
+                            <li>Access to 10 courses</li>
+                            <li>Basic Support</li>
+                            <li>Community Access</li>
+                        </ul>
+                        <button class="enroll">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="pricing-card">
+                        <h2>Standard Access</h2>
+                        <p class="price">₹999/month</p>
+                        <ul>
+                            <li>Access to 50 courses</li>
+                            <li>Priority Support</li>
+                            <li>Community Access</li>
+                            <li>Certificates of Completion</li>
+                        </ul>
+                        <button class="enroll">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="pricing-card">
+                        <h2>Premium Access</h2>
+                        <p class="price">₹1499/month</p>
+                        <ul>
+                            <li>Unlimited Course Access</li>
+                            <li>24/7 Support</li>
+                            <li>Community Access</li>
+                            <li>Certificates of Completion</li>
+                            <li>Exclusive Webinars</li>
+                        </ul>
+                        <button class="enroll">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <p style="font-weight: bold;font-size:48px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            class="text-center">
+            Frequently Asked Questions
+
+        </p>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">What
+                    courses are available on the platform?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Our platform offers a wide range of courses across various domains,
+                    including programming, data science, digital marketing, graphic design, and more. We regularly
+                    update our course catalog to include the latest trends and technologies.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Can I
+                    get a refund if I'm not satisfied with a course?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, we offer a 7-day money-back guarantee for all our courses. If you're
+                    not satisfied with a course, you can request a refund within 7 days of purchase, and we will process
+                    your refund promptly.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">What
+                    support is available if I have questions during a course?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We offer different levels of support depending on your subscription plan.
+                    Basic Access includes basic support, Standard Access includes priority support, and Premium Access
+                    includes 24/7 support. You can reach out to our support team via email, chat, or phone.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">How
+                    can I access my courses?
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Once you enroll in a course, you can access it anytime, anywhere, through
+                    our website or mobile app. Your progress will be synced across devices, so you can seamlessly
+                    continue learning.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <pre>
+
+
+
+
+
+</pre>
+
+
+
+<footer class="bg-dark footer mt-5">
+    <div class="empty">
+        <h3 class="text-center">Explore the world of learning with us</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{{url_for('development')}}">Web development</a>
+                <br>
+                <a href="{{url_for('python_courses')}}">Python</a>
+                <br>
+                <a href="{{url_for('IT_Software')}}">ChatGPT</a>
+            </div>
+            <div class="col">
+                <a href="{{url_for('datasciencecourses')}}">Data Science</a>
+                <br>
+                <a href="{{url_for('othersoftware')}}">Excel</a>
+                <br>
+                <a href="{{url_for('programming_languages')}}">C/C++</a>
+            </div>
+            <div class="col">
+                <a href="{{url_for('about')}}">About Us</a>
+                <br>
+                <a href="{{url_for('contact')}}">Contact Us</a>
+                <br>
+                <a href="#">Privacy Policy</a>
+                <br>
+                <a href="#">Terms of Service</a>
+                <br>
+
+            </div>
+            <div class="social-media">
+                <a href="www.facebook.com" class="social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.twitter.com" class="social">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="https://www.linkedin.com" class="social">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="contact-info row">
+                <p style="color: white;">Phone: 123-456-7890</p>
+                <p style="color: white;">Email: support@example.com</p>
+            </div>
+        </div>
+        <p class="text-center" style="background-color: black; color: white">
+            &copy;Agaahi
+        </p>
+</footer>
+
+
+
+    <script src="https://kit.fontawesome.com/9a037b9bfa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>

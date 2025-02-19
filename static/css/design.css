@@ -1,0 +1,373 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: rgb(154, 91, 221) !important;
+}
+
+body {
+    margin: 0px;
+}
+
+.btn {
+    margin: 20px;
+}
+
+main {
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.img {
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+}
+
+.opacity {
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: aliceblue;
+    font-size: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 1px 0.2px 0.5px white;
+
+
+}
+
+.s1 {
+    text-shadow: 1px 0.2px 0.5px white;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.buttons>form>button {
+    width: 160px;
+    border-radius: 5px;
+    height: 50px;
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+}
+
+.python {
+    background-color: rgb(138, 67, 213);
+    color: aliceblue;
+    font-size: 17px;
+}
+
+.excel {
+    background-color: #fff;
+    font-size: 20px;
+    color: rgb(138, 67, 213);
+}
+
+.python:hover {
+    background-color: rgb(119, 58, 184);
+}
+
+.excel:hover {
+    background-color: #dad6d6;
+    color: rgb(138, 67, 213);
+}
+
+
+.logo {
+    height: 80px;
+    width: 110px;
+    position: static;
+}
+
+input {
+    height: 40px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.submit {
+    margin-top: 1px !important;
+    border: 2px solid rgb(138, 67, 213) !important;
+    color: rgb(138, 67, 213) !important;
+}
+
+.submit:hover {
+    background-color: rgb(138, 67, 213) !important;
+    color: white !important;
+}
+
+a:hover {
+    color: rgb(138, 67, 213) !important;
+    font-weight: bold;
+}
+
+.login {
+    margin-top: 1px !important;
+    background-color: rgb(138, 67, 213) !important;
+    color: white !important;
+}
+
+.login:hover {
+    background-color: rgb(119, 56, 186) !important;
+    color: white !important;
+
+}
+
+.card1 {
+    margin: 20px;
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.card2 {
+    margin: 20px;
+    display: flex !important;
+    justify-content: space-between;
+
+}
+
+.cards {
+    background-color: #eae9e9;
+
+}
+
+.prevbtn {
+    background-color: rgb(138, 67, 213);
+    border-radius: 50%;
+}
+
+b {
+    margin: 15px;
+}
+
+.navg>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navg {
+    height: 50px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: whitesmoke;
+    padding-top: 10px;
+    padding-right: 20px;
+
+}
+
+.a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0.5;
+        transform: scale3d(.5, .5, .5);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+    animation-timeline: view();
+    animation-range: 0 100vh;
+
+}
+
+
+.animate__zoomIn {
+    animation-name: zoomIn;
+    animation-timeline: view();
+    animation-range: 0 100vh;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.feature i {
+    font-size: 50px;
+    color: rgb(138, 67, 213);
+}
+
+.feature h3 {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.feature p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.explore {
+    background-color: #f6f6f6;
+    border: none;
+}
+
+.explore:hover {
+    background-color: #f6f6f6;
+    border: none;
+    color: rgb(138, 67, 213);
+    font-weight: bold;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.teach-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.teach-section h2 {
+    margin-bottom: 30px;
+}
+
+.teach-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.teach-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.card-img-top {
+    height: 10rem;
+    transition: transform 1s ease;
+}
+
+.zoom-container {
+    overflow: hidden;
+
+}
+
+.card-img-top:hover {
+    transform: scale(1.2);
+}
+
+
+.pricing-card {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 9px solid rgb(138, 67, 213);
+    background-color: #fff;
+}
+
+.pricing-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    background: #f6f6f6;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(234, 233, 233);
+}
+
+.enroll {
+    background-color: rgb(138, 67, 213);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tcard {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.enroll:hover {
+    background-color: rgb(154, 91, 221);
+}
+
+.pricings {
+    background-color: #f6f4f4;
+}
+
+.footer .row a {
+    color: white;
+    text-decoration: none;
+}
+
+.social {
+    color: white;
+}
+
+.empty {
+    background-color: black;
+    height: 100px;
+    color: white;
+}
+
+.row {
+    display: flex;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+}
+

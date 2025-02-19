@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Sign Up{% endblock %}
+
+{% block content %}
+<style>
+    
+    .login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        gap: 50px; 
+    }
+    .image-container {
+        max-width: 50%;
+        display: block;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+
+    .form-container {
+        width: 100%;
+        max-width: 444px;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        position: relative;
+        animation: moving-shadow 4s infinite linear;
+    }
+
+    @keyframes moving-shadow {
+        0% {
+            box-shadow: 15px 0 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        }
+        25% {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        }
+        50% {
+            box-shadow: -15px 0 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        }
+        75% {
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        }
+        100% {
+            box-shadow: 15px 0 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 67, 213, 0.8);
+        }
+    }
+
+   
+    .form-container h2 {
+        color: rgb(138, 67, 213);
+        margin-bottom: 20px;
+    }
+
+   
+    .form-control {
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .login-btn {
+        background-color: rgb(138, 67, 213);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        width: 100%; 
+        transition: background-color 0.3s ease;
+        text-align: center;
+    }
+
+    .login-btn:hover {
+        background-color: rgb(119, 56, 186);
+    }
+
+    
+    .flash-message {
+        background-color: #ffcccc;
+        color: #d8000c;
+        border: 1px solid #d8000c;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    
+    @media (max-width: 768px) {
+        .login-page {
+            flex-direction: column;
+            gap: 30px; /* Reduced space between image and form */
+        }
+
+        .image-container {
+            max-width: 100%;
+            display: block;
+        }
+
+        .form-container {
+            width: 90%;
+        }
+    }
+</style>
+
+<body>
+    <div class="login-page">
+        <div class="image-container">
+            <img src="../static/img/ca73ef8f-1af5-40f7-bacc-311e4834bee8.jpg" alt="Sign Up Image">
+        </div>
+        <div class="form-container">
+            <h2>Create an Account</h2>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-message">
+                        {{ messages[0][1] }}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="mb-3">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your Mobile Number" pattern="\d{10}" required title="Mobile number must be exactly 10 digits.">
+                </div>
+                <div class="mb-3">
+                    <label for="role">Role:</label>
+                    <select name="role" id="role" class="form-select" required>
+                        <option value="student">Student</option>
+                        <option value="instructor">Instructor</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Your Password" required
+                           title="Password must be at least 8 characters long, contain at least one letter, one number, and one special character.">
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password" required title="Passwords must match.">
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+            <p class="text-center">
+                Already have an account? <a href="{{ url_for('login') }}">Login here</a>.
+            </p>
+        </div>
+    </div>
+
+   
+</body>
+{% endblock %}

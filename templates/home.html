@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/design.css">
+    <title>Agaahi Dashboard</title>
+</head>
+<style>
+    .user {
+        font-size: 32px;
+    }
+
+    .navg {
+        position: static !important;
+    }
+
+    .star {
+        color: rgb(255, 166, 0);
+    }
+
+    .card {
+        overflow: hidden;
+    }
+
+    .heading {
+        margin-left: 20px;
+        font-size: 28px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline ">
+            <div class="container-fluid">
+                <img src="{{ url_for('static', filename='img/image.png') }}" class="logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything"
+                        aria-label="Search">
+                    <button class="btn submit" type="submit">Search</button>
+                </form>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('home')}}"style="color: rgb(138, 67, 213);">Home</a>
+
+                        <div class="dropdown explore">
+                            <button class="dropdown-toggle explore nav-link" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{url_for('datasciencecourses')}}">Data Science</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('python_courses')}}">Python</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('othersoftware')}}">Excel</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('javacourses')}}">Java</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('programming_languages')}}">C++</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('programming_languages')}}">C</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('development')}}">Web Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('development')}}">Game Development</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('dataanalysiscourses')}}">Data Analysis</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-link" href="{{url_for('teachy')}}">Teach on Agaahi</a>
+                    </div>
+                    <a href="{{url_for('user')}}"><i class="fa-solid fa-user user" style="color: #B197FC;"></i></a>
+                    <form action="{{ url_for('logout') }}" method="get">
+                        <button class="btn login">Log Out</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <nav class="navg">
+        <ul>
+            <li><a href="{{url_for('development')}}" class="a">Web Development</a></li>
+            <li><a href="{{url_for('programming_languages')}}" class="a">Programming Languages</a></li>
+            <li><a href="{{url_for('dataanalysiscourses')}}" class="a">Data Analysis</a></li>
+            <li><a href="{{url_for('IT_Software')}}" class="a">IT & Software</a></li>
+            <li><a href="{{url_for('datasciencecourses')}}" class="a">Data Science</a></li>
+        </ul>
+    </nav>
+
+    <pre>
+
+
+    </pre>
+    <h1 class="text-center" style="color: rgb(138, 53, 187);">
+        Welcome,{{user.name}}
+    </h1>
+    <br><br>
+    <div class="row">
+        <br><br>
+        <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-left:20px"
+            class="heading">
+            Programming Languages</h5>
+        <div class="card bg-white rounded-lg shadow-lg p-4" style="width: 22rem;">
+            <a href="https://youtu.be/4GDNUU82DX0?si=uxtLVQ_Jsci6FXD9" target="_blank">
+                <img alt="Illustration of a laptop with Python logo and a robotic arm" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/Cck6ILSIuYTRlY3fQ9_5NbiMwkNuFw55VArL-95Ye7M.jpg" /></a>
+            <div class="p-4">
+                <h5>
+                    The Complete Python Bootcamp From Zero to Hero in Python
+                </h5>
+                <p>
+                    Jose Portilla, Pierian Training
+                </p>
+                <div>
+                    <span>4.6</span>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+                    <span>(528,937) </span>
+                </div>
+                <div>
+                    ₹489
+                    <strike>
+                        ₹3,999
+                    </strike>
+
+                </div>
+            </div>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-4" style="width: 22rem;">
+            <a href="https://youtu.be/KBYN6_-YTFU?si=HwIrOwt3-mV1_RFZ" target="_blank">
+                <img class="card-img-top" alt="Portrait of a woman with Python logo in the background"
+                    src="https://storage.googleapis.com/a1aa/image/mJdAJYT455ShS7K_VmzA-tiTUeT0gh5XxWzY8zwdrQo.jpg"></a>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold">
+                    100 Days of Code: The Complete Python Pro Bootcamp
+                </h3>
+                <p class="text-gray-600">
+                    Dr. Angela Yu, Developer and Lead Instructor
+                </p>
+                <div class="flex items-center text-yellow-500 mb-2">
+                    <span class="text-sm font-semibold">
+                        4.7
+                    </span>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <span>
+                        (351,094)
+                    </span>
+                </div>
+                <div class="text-lg font-semibold text-gray-900">
+                    ₹529
+                    <strike>
+                        ₹3,299
+                    </strike>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-4" style="width: 22rem;">
+            <a href="https://youtu.be/aFfDDdAPCbA?si=d-aivldi5kKYRoJL" target="_blank">
+                <img alt="Illustration of a laptop with Python logo" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/jVA_NVpbyykEOQwWEHar-a-30J1kKLJVZNamDY6bVtM.jpg"></a>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold">
+                    Automate the Boring Stuff with Python Programming
+                </h3>
+                Al Sweigart
+                </p>
+                <div>
+                    <span class="text-sm font-semibold">
+                        4.6
+                    </span>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+                    <span>
+                        (115,442)
+                    </span>
+                </div>
+                <div>
+                    ₹619
+                    <strike>
+                        ₹3,999
+                    </strike>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-4" style="width: 22rem;">
+            <a href="https://youtu.be/PyoWEmj457U?si=hYtUd-A3EREK_IRx" target="_blank">
+                <img alt="Laptop with Java code and Duke mascot" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/tF6nYXkiVhujuGJicYu297oMyoCXd3Nev1CuNiFlNBo.jpg" /></a>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold">
+                    Java Masterclass 2025: 130+ Hours of Expert Lessons
+                </h3>
+                <p class="text-gray-600">
+                    Tim Buchalka, Tim Buchalka's Learn Programming...
+                </p>
+                <div class="flex items-center text-yellow-500 mb-2">
+                    <span class="text-sm font-semibold">
+                        4.6
+                    </span>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+                    <span>
+                        (204,144)
+                    </span>
+                </div>
+                <div>
+                    ₹619
+                    <strike class="line-through text-gray-600">
+                        ₹3,999
+                    </strike>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br>
+
+    <div class="row">
+        <h5 class="heading">Development</h5>
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/bqAU2k8JQa8?si=6xPVwZG3IWpteF0L" target="_blank">
+                <img alt="Illustration of a laptop with Python logo and a wrench" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/DmUGS0E7jSYUtCzhS1R0_lRmFEhQl06ymKH4hcXiM_E.jpg"></a>
+            <div class="p-4">
+                <h2>
+                    The Complete Python Bootcamp From Zero to Hero in Python
+                </h2>
+                <p>
+                    Jose Portilla, Pierian Training
+                </p>
+                <div class="flex items-center mt-2">
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+
+                    <span>
+                        4.6 (528,937)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-4" style="width: 22rem;">
+            <a href="https://youtu.be/R6RX2Zx96fE?si=zKQSBxmiH7n67OYJ" target="_blank">
+                <img alt="Illustration of a woman with various web development logos" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/GVy1lkivCnrCe08jgX2_wuCvd1W_UfTZtlgvXkJ1RM4.jpg"></a>
+            <div class="p-4">
+                <h2>
+                    The Complete Full-Stack Web Development Bootcamp
+                </h2>
+                <p>
+                    Dr. Angela Yu, Developer and Lead Instructor
+                </p>
+                <div>
+
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+                    <span>
+                        4.7 (424,105)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/KBYN6_-YTFU?si=tAqvOaopMBK-JmqB" target="_blank">
+                <img alt="Illustration of a woman with Python logo and colorful background" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/WjwEbw4BL-5wrrQKFAqyRcUinu1CW37byCZL1OLkTIw.jpg"></a>
+            <div class="p-4">
+                <h2>
+                    100 Days of Code: The Complete Python Pro Bootcamp
+                </h2>
+                <p>
+                    Dr. Angela Yu, Developer and Lead Instructor
+                </p>
+                <div class="flex items-center mt-2">
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star star">
+                    </i>
+                    <i class="fas fa-star-half-alt star">
+                    </i>
+                    <span>
+                        4.7 (351,094)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/1F_OgqRuSdI?si=gwnVcIt5eDqTj3y_" target="_blank">
+                <img alt="Illustration of a laptop with Python logo" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/OJxsTiXJVwcJIwp1Zucf3zOWrdKoaIAmOCbnDMe0nsk.jpg" /></a>
+            <div class="p-4">
+                <h2>
+                    Automate the Boring Stuff with Python Programming
+                </h2>
+                <p>
+                    Al Sweigart
+                </p>
+                <div class="flex items-center mt-2">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    <span>
+                        4.6 (115,442)
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <h5 class="heading">Data Analysis</h5>
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/AVS49C5rnuQ?si=i-Yp6GNz2_V2mJGM" target="_blank">
+                <img alt="Microsoft" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/5nnkC4blBP9jtTOVdj5OqoCJEJBcOHDGxLumkGJcNn8.jpg">
+            </a>
+            <h3 class="mt-4">
+                Microsoft Excel: Advanced Excel Formulas &amp; Functions
+            </h3>
+            <p>
+                Maven Analytics, Chris Dutton
+            </p>
+            <div class="flex items-center mt-2">
+                <span>
+                    4.7
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                </span>
+                <span class="ml-2">
+                    (101,337)
+                </span>
+            </div>
+            <p class="text-xl font-bold text-gray-800 mt-2">
+                ₹599
+                <strike class="line-through text-gray-500">
+                    ₹9,999
+                </strike>
+            </p>
+        </div>
+
+
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/r-uOLxNrNk8?si=-5ONWcciMpu6bD10" target="_blank">
+                <img alt="Learning Python" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/RBMJf693YMu6pfdk96dWMciQPfjA6r6A5BosrOEFr6Y.jpg">
+            </a>
+            <h3 class="mt-4">
+                Learning Python for Data Analysis and Visualization Ver 1
+            </h3>
+            <p>
+                Jose Portilla, Pierian Training, Pierian Training
+            </p>
+            <div class="flex items-center mt-2">
+                <span>
+                    4.5
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                </span>
+                <span class="text-gray-600 ml-2">
+                    (19,920)
+                </span>
+            </div>
+            <p class="text-xl font-bold text-gray-800 mt-2">
+                ₹599
+                <strike>
+                    ₹9,999
+                </strike>
+            </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 21rem;">
+            <a href="https://youtu.be/qrMnoY8qBJM?si=uHV2A2HS9h2cVOBh" target="_blank">
+                <img alt="Data Analysis with Pandas and Python" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/Y8T-PJak1CiIcm3UCTFLwLPrpc-zA88s5C84COyl_MM.jpg"></a>
+            <h3 class="text-lg font-bold text-gray-800 mt-4">
+                Data Analysis with Pandas and Python
+            </h3>
+            <p>
+                Boris Paskhaver
+            </p>
+            <div class="mt-2">
+                <span>
+                    4.7
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                </span>
+                <span>
+                    (23,772)
+                </span>
+            </div>
+            <p>
+                ₹599
+                <strike>
+                    ₹9,999
+                </strike>
+            </p>
+
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4 card" style="width: 22rem;">
+            <a href="https://youtu.be/dMn2QFTyXUQ?si=LEQlM8aHA5SWsSyR" target="_blank">
+                <img alt="The Data Analyst Course: Complete Data Analyst Bootcamp" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/flpqkVO8MdUSrqdB0tAmgJ9OKArNLJFgGgPnED-4jXo.jpg"></a>
+            <h3 class="mt-4">
+                The Data Analyst Course: Complete Data Analyst Bootcamp
+            </h3>
+            <p>
+                365 Careers
+            </p>
+            <div>
+                4.5
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star-half-alt star"></i>
+
+                <span>
+                    (20,291)
+                </span>
+            </div>
+            <p>
+                ₹549
+                <strike>
+
+                    ₹3,499
+                </strike>
+            </p>
+        </div>
+
+    </div>
+
+
+    <br><br>
+
+    <div class="row">
+        <h5 class="heading">Other Softwares</h5>
+        <div class="border rounded-lg overflow-hidden shadow-lg card" style="width: 22rem;">
+            <a href="https://youtu.be/Z1RJmh_OqeA?si=RG4D_fc9cbtseUOO" target="_blank">
+                <img alt="laptop" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/ouXBShyvhQ9h1pMaXZcnKGzUabd9Js0VgsFs8PLZ6c0.jpg">
+            </a>
+            <div class="p-4">
+                <h3 class="mb-2">
+                    Python And Flask Framework Complete Course For Beginners
+                </h3>
+                <p class="mb-2">Horizon Tech
+                </p>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+
+
+                    <span class="ml-2 text-gray-600">
+                        (13,912)
+                    </span>
+                </div>
+                <span class="text-lg font-bold">
+                    ₹579
+                </span>
+                <strike class="ml-2">
+                    ₹2,799
+                </strike>
+
+            </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg card" style="width: 22rem;">
+            <a href="https://youtu.be/wbJcJCkBcMg?si=ikTmJf4HbuZHhzgN" target="_blank">
+                <img alt="laptop" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/yItU4fUggOcJiOMMuUVzHqhmp-8wPcdook9Uea6J2cc.jpg">
+            </a>
+            <div class="p-4">
+                <h3 class="mb-2">
+
+                    Microsoft Excel - Beginner to Advance with Example
+                </h3>
+                <p class="mb-2">
+
+                    Meet Doshi
+                </p>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+
+
+                    <span class="ml-2 text-gray-600">
+                        (12,342)
+                    </span>
+                </div>
+                <span class="text-lg font-bold">
+                    ₹579
+                </span>
+                <strike class="ml-2">
+                    ₹3,469
+                </strike>
+
+            </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg card" style="width: 22rem;">
+            <a href="https://youtu.be/9SJnhUxXJsI?si=daGEwj-LrvFD4unR" target="_blank">
+                <img alt="laptop" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/6bIWYeuhrz4SeAot1Rr2pTQ6qtuYmoDJP4doyHeReqw.jpg">
+            </a>
+            <div class="p-4">
+                <h3 class="mb-2">
+                    Python And Flask Framework Complete Course
+                </h3>
+                <p class="mb-2">
+                    Horizon Tech
+                </p>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+
+
+                    <span class="ml-2 text-gray-600">
+                        (15,369)
+                    </span>
+                </div>
+                <span class="text-lg font-bold">
+                    ₹589
+                </span>
+                <strike class="ml-2">
+                    ₹5,399
+                </strike>
+
+            </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg card" style="width: 22rem;">
+            <a href="https://youtu.be/9SJnhUxXJsI?si=daGEwj-LrvFD4unR" target="_blank">
+                <img alt="laptop" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/oDLlBZQrohJhHv4KfxyfjtEPhVpuuNZiZuVngTb4vuQ.jpg">
+            </a>
+            <div class="p-4">
+                <h3 class="mb-2">
+                    Python : Master Programming and Development with 15 Projects
+                </h3>
+                <p class="mb-2">
+                    Dev Nirwal, Ritu Antil
+                </p>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+
+
+                    <span class="ml-2 text-gray-600">
+                        (12,342)
+                    </span>
+                </div>
+                <span class="text-lg font-bold">
+                    ₹649
+                </span>
+                <strike class="ml-2">
+                    ₹3,499
+                </strike>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <br><br><br>
+
+    <footer class="bg-dark footer mt-5">
+        <div class="empty">
+            <h3 class="text-center">Explore the world of learning with us</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="{{url_for('development')}}">Web development</a>
+                    <br>
+                    <a href="{{url_for('python_courses')}}">Python</a>
+                    <br>
+                    <a href="{{url_for('IT_Software')}}">ChatGPT</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('datasciencecourses')}}">Data Science</a>
+                    <br>
+                    <a href="{{url_for('othersoftware')}}">Excel</a>
+                    <br>
+                    <a href="{{url_for('programming_languages')}}">C/C++</a>
+                </div>
+                <div class="col">
+                    <a href="{{url_for('about')}}">About Us</a>
+                    <br>
+                    <a href="{{url_for('contact')}}">Contact Us</a>
+                    <br>
+                    <a href="#">Privacy Policy</a>
+                    <br>
+                    <a href="#">Terms of Service</a>
+                    <br>
+
+                </div>
+                <div class="social-media">
+                    <a href="www.facebook.com" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com" class="social">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com" class="social">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="contact-info row">
+                    <p style="color: white;">Phone: 123-456-7890</p>
+                    <p style="color: white;">Email: support@example.com</p>
+                </div>
+            </div>
+            <p class="text-center" style="background-color: black; color: white">
+                &copy;Agaahi
+            </p>
+    </footer>
+
+
+
+
+    <script src="https://kit.fontawesome.com/9a037b9bfa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

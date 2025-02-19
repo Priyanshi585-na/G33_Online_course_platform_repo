@@ -1,0 +1,224 @@
+{% extends 'base2.html' %}
+{% block title %}
+    Data Analysis
+{% endblock title %}
+
+{% block style %}
+
+<style>
+    .cs {
+        background-color: rgb(231, 231, 231);
+        border: 2px solid black;
+        color: black;
+        text-decoration: none;
+        border-radius: 50px;
+        margin: 20px;
+    }
+
+    .related {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .card{
+        overflow: hidden;
+    }
+</style>
+{% endblock style %}
+
+
+{% block main %}
+    
+<div class="contain mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-gray-800">
+        Data Analysis Courses
+    </h1>
+    <p class="text-gray-600 mt-4">
+        Data analysis courses teach the process of examining, cleaning, transforming, and modeling data to uncover
+        insights. Learn data manipulation, statistical analysis, and visualization techniques. Mastering data
+        analysis is crucial for informed decision-making in data-focused fields.
+    </p>
+    <div class="flex flex-wrap mt-6">
+        <div class="btn">
+            <p class="text-gray-600">
+                Number of learners
+            </p>
+            <p class="text-2xl font-bold text-gray-800">
+                3,934,352
+            </p>
+        </div>
+        <div class="btn">
+            <p class="text-gray-600">
+                Number of courses
+            </p>
+            <p class="text-2xl font-bold text-gray-800">
+                867
+            </p>
+        </div>
+        <div class="btn">
+            <p class="text-gray-600">
+                Number of hands-on practice
+            </p>
+            <p class="text-2xl font-bold text-gray-800">
+                2,717
+                <i class="fas fa-info-circle text-gray-500">
+                </i>
+            </p>
+        </div>
+        <div class="btn">
+            <p class="text-gray-600">
+                Average course rating
+            </p>
+            <p class="text-2xl font-bold text-gray-800">
+                4.4
+                <i class="fas fa-star" style="color: rgb(138, 67, 213);"></i>
+                <i class="fas fa-star" style="color: rgb(138, 67, 213);"></i>
+                <i class="fas fa-star" style="color: rgb(138, 67, 213);"></i>
+                <i class="fas fa-star" style="color: rgb(138, 67, 213);"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(138, 67, 213);"></i>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="flex flex-wrap mt-4">
+
+        <p class="related">
+
+            Related
+        </p>
+
+
+        <a href="{{url_for('development')}}" class="px-4 py-2 cs">Development</a>
+        <a href="{{url_for('IT_Software')}}" class="px-4 py-2 cs">IT &amp; Software</a>
+        <a href="{{url_for('programming_languages')}}" class="px-4 py-2 cs">Programming languages</a>
+        <a href="{{url_for('dataanalysiscourses')}}" class="px-4 py-2 cs">Data Science </a>
+    </div>
+
+    <br><br>
+    <h2 class="text-2xl font-bold text-gray-800 mt-8">
+        Courses to get you started
+    </h2>
+    <p class="text-gray-600">
+        Explore courses from experienced, real-world experts.
+    </p>
+
+</div>
+
+
+
+<div class="container">
+
+        <div class="shadow-lg p-4 card" style="width: 20rem;">
+            <a href="https://youtu.be/AVS49C5rnuQ?si=i-Yp6GNz2_V2mJGM" target="_blank">
+                <img alt="Microsoft Excel: Advanced Excel Formulas &amp; Functions" class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/5nnkC4blBP9jtTOVdj5OqoCJEJBcOHDGxLumkGJcNn8.jpg"></a>
+            <h3 class="text-lg font-bold text-gray-800 mt-4">
+                Microsoft Excel: Advanced Excel Formulas &amp; Functions
+            </h3>
+            <p class="text-gray-600">
+                Maven Analytics, Chris Dutton
+            </p>
+            <div class="flex items-center mt-2">
+                <span>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star-half-alt" style="color: rgb(255, 179, 0);"></i>
+                    4.7
+                </span>
+            </div>
+        </div>
+
+
+
+    
+        <div class="shadow-lg p-4 card" style="width: 20rem;">
+            <a href="https://youtu.be/r-uOLxNrNk8?si=-5ONWcciMpu6bD10" target="_blank">
+                <img alt="Learning Python for Data Analysis and Visualization Ver 1"
+                    class="card-img-top" 
+                    src="https://storage.googleapis.com/a1aa/image/RBMJf693YMu6pfdk96dWMciQPfjA6r6A5BosrOEFr6Y.jpg"
+                    width="600" /></a>
+            <h3 class="text-lg font-bold text-gray-800 mt-4">
+                Learning Python for Data Analysis and Visualization Ver 1
+            </h3>
+            <p class="text-gray-600">
+                Jose Portilla, Pierian Training, Pierian Training
+            </p>
+            <div class="flex items-center mt-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star-half-alt" style="color: rgb(255, 179, 0);"></i>
+                    4.5
+                </span>
+            </div>
+        </div>
+
+        
+
+
+        <div class="shadow-lg p-4 card" style="width:20rem">
+            <a href="https://youtu.be/qrMnoY8qBJM?si=uHV2A2HS9h2cVOBh" target="_blank">
+                <img alt="Data Analysis with Pandas and Python" class="card-img-top"
+                    height="400"
+                    src="https://storage.googleapis.com/a1aa/image/Y8T-PJak1CiIcm3UCTFLwLPrpc-zA88s5C84COyl_MM.jpg"
+                    width="600" /></a>
+            <h3 class="text-lg font-bold text-gray-800 mt-4">
+                Data Analysis with Pandas and Python
+            </h3>
+            <p class="text-gray-600">
+                Boris Paskhaver
+            </p>
+            <div class="flex items-center mt-2">
+                <span>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color: rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star-half-alt" style="color: rgb(255, 179, 0);"></i>
+                    4.7
+                </span>
+            </div>
+        </div>
+   
+
+
+
+
+
+        <div class="shadow-lg p-4 card" style="width: 20rem;">
+            <a href="https://youtu.be/dMn2QFTyXUQ?si=LEQlM8aHA5SWsSyR" target="_blank">
+                <img alt="The Data Analyst Course: Complete Data Analyst Bootcamp"
+                    class="card-img-top"
+                    src="https://storage.googleapis.com/a1aa/image/flpqkVO8MdUSrqdB0tAmgJ9OKArNLJFgGgPnED-4jXo.jpg"></a>
+            <h3 class="text-lg font-bold text-gray-800 mt-4">
+                The Data Analyst Course: Complete Data Analyst Bootcamp
+            </h3>
+            <p class="text-gray-600">
+                365 Careers
+            </p>
+            <div class="flex items-center mt-2">
+                <span class="text-yellow-500">
+                    <i class="fas fa-star" style="color:rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color:rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color:rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star" style="color:rgb(255, 179, 0);"></i>
+                    <i class="fas fa-star-half-alt" style="color:rgb(255, 179, 0);"></i>
+                    4.5
+                </span>
+            </div>
+        </div>
+</div>
+{% endblock main %}
+
+
